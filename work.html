@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Work</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<header>
+		<img src="../logo/plogo2.png" alt="" id="plogo">
+		<ul>
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="#" id="Home" >Work</a></li>
+			<li><a href="https://drive.google.com/file/d/1MZK_LaE4gnS-w7gw8GHycaYN0liJlO4m/view?usp=sharing">Resume</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><img src="../logo/sun.png" alt="" id="icon"></li>
+		</ul>
+	</header>
+	<div class="workcontainer">
+		<p>My Projects</p>
+		<div class="projectcard1">
+			<div class="projectdetail1">
+				<div class="projectdetailchild1">
+					<p>1)Analog Clock</p>
+					<p> It's a digital clock based on 24 hour clock format which uses Mathematics and degree relation for dynamically working minute ,second and hour hand .The project is developed using Html ,Css, Javascript</p>
+					<div class="projectlink1">
+						<a href="https://aliahmed01.github.io/clock-using-html-css-js/">Github</a>
+					</div>
+				</div>
+			</div>
+			<div class="projectimage1">
+				<a href="https://aliahmed01.github.io/clock-using-html-css-js/"><img src="clock1.png""></a>
+			</div>
+		</div>
+		<div class="projectcard2">
+			<div class="projectimage2">
+				<a href="https://aliahmed01.github.io/Calculator/"><img src="calculator.png" alt=""></a>
+			</div>
+			<div class="projectdetail2">
+				<div class="projectdetailchild2">
+					<p>2)Calculator</p>
+					<p>Calculator using html css and javascript for simple Mathematical calculations</p>
+					
+					<div class="projectlink2">
+						<a href="https://aliahmed01.github.io/Calculator/">Github</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="projectcard1">
+			<div class="projectdetail1">
+				<div class="projectdetailchild1">
+					<p>3)FLIPKART CLONE PAGE</p>
+					<p>A flipkart clone page using Html and Css</p>
+					<div class="projectlink1">
+						<a href="https://aliahmed01.github.io/FlipkatClone-/">Github</a>
+					</div>
+				</div>
+			</div>
+			<div class="projectimage1">
+				<a href="https://aliahmed01.github.io/FlipkatClone-/"><img src="flipkart.png" alt=""></a>
+			</div>
+		</div>
+		<div class="projectcard1">
+			<div class="projectdetail2">
+				<div class="projectdetailchild2">
+					<p>4)Shopping Website</p>
+					<p>A Shopping Website page using Html, Css and JS</p>
+					<div class="projectlink2">
+						<a href="https://aliahmed01.github.io/Shopping-website/">Github</a>
+					</div>
+				</div>
+			</div>
+			<div class="projectimage1">
+				<a href="https://aliahmed01.github.io/Shopping-website/"><img src="Screenshot (21).png" alt=""></a>
+			</div>
+		</div>
+
+<script>
+	let lightMode= localStorage.getItem('lightMode');
+	const icon = document.querySelector('#icon');
+	const enableLightMode=() =>{
+		document.body.classList.add('lightmode');
+		localStorage.setItem('lightMode','enabled');
+	}
+	const disableLightMode=() =>{
+		document.body.classList.remove('lightmode');
+		localStorage.setItem('lightMode',null);
+	}
+	if(lightMode === "enabled"){
+		enableLightMode();
+		icon.src="../logo/moon.png";
+		plogo.src="../logo/logolightmode2.png"
+	}
+
+	icon.addEventListener("click", () =>{
+		lightMode= localStorage.getItem('lightMode');
+		if(lightMode !== "enabled"){
+			enableLightMode();
+			icon.src="../logo/moon.png";
+			plogo.src="../logo/logolightmode2.png"
+		}
+		else{
+			disableLightMode();
+			icon.src="../logo/sun.png";
+	    	plogo.src="../logo/plogo2.png";
+		}
+	});
+
+
+	var icon = document.getElementById('icon');
+	var plogo= document.getElementById('plogo');
+	icon.onclick = function(){
+		document.body.classList.toggle("light-theme");
+		if (document.body.classList.contains("light-theme")) {
+			icon.src="../logo/moon.png"
+			plogo.src="../logo/logolightmode2.png"
+		}
+		else{
+			icon.src="../logo/sun.png"
+			plogo.src="../logo/plogo2.png"
+		}
+	}
+</script>	
+</body>
+</html>
